@@ -85,3 +85,4 @@ ls --color=auto
 more universe.sql
 psql -U postgres < universe.sql
 more universe.sql
+pg_dump -cC --inserts -U freecodecamp universe > universe.sql
