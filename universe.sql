@@ -270,6 +270,12 @@ ALTER TABLE ONLY public.star ALTER COLUMN star_id SET DEFAULT nextval('public.st
 -- Data for Name: comet; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.comet VALUES ('Halley', 1, 'Ice and dust', true, 35100000);
+INSERT INTO public.comet VALUES ('Encke', 2, 'Carbonaceous', true, 57800000);
+INSERT INTO public.comet VALUES ('Tempel 1', 3, 'Ice and dust', true, 130600000);
+INSERT INTO public.comet VALUES ('Wild 2', 4, 'Carbonaceous', true, 249900000);
+INSERT INTO public.comet VALUES ('Borrelly', 5, 'Carbonaceous', true, 225200000);
+INSERT INTO public.comet VALUES ('Hale-Bopp', 6, 'Ice and dust', true, 88200000);
 
 
 --
@@ -288,12 +294,44 @@ INSERT INTO public.galaxy VALUES ('Sombrero', 6, 'Spiral', 9000, 75000, 11000000
 -- Data for Name: moon; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.moon VALUES ('Luna', 1, 'Natural', 3, false);
+INSERT INTO public.moon VALUES ('Phobos', 2, 'Natural', 4, false);
+INSERT INTO public.moon VALUES ('Deimos', 3, 'Natural', 4, false);
+INSERT INTO public.moon VALUES ('Ganymede', 4, 'Natural', 5, false);
+INSERT INTO public.moon VALUES ('Europa', 5, 'Natural', 5, false);
+INSERT INTO public.moon VALUES ('Io', 6, 'Natural', 5, false);
+INSERT INTO public.moon VALUES ('Titan', 7, 'Natural', 6, false);
+INSERT INTO public.moon VALUES ('Rhea', 8, 'Natural', 7, false);
+INSERT INTO public.moon VALUES ('Iapetus', 9, 'Natural', 7, false);
+INSERT INTO public.moon VALUES ('Titania', 10, 'Natural', 8, false);
+INSERT INTO public.moon VALUES ('Oberon', 11, 'Natural', 8, false);
+INSERT INTO public.moon VALUES ('Triton', 12, 'Natural', 9, false);
+INSERT INTO public.moon VALUES ('Charon', 13, 'Natural', 10, false);
+INSERT INTO public.moon VALUES ('Enceladus', 14, 'Natural', 7, false);
+INSERT INTO public.moon VALUES ('Miranda', 15, 'Natural', 11, false);
+INSERT INTO public.moon VALUES ('Umbriel', 16, 'Natural', 8, false);
+INSERT INTO public.moon VALUES ('Ariel', 17, 'Natural', 8, false);
+INSERT INTO public.moon VALUES ('Dione', 18, 'Natural', 7, false);
+INSERT INTO public.moon VALUES ('Tethys', 19, 'Natural', 7, false);
+INSERT INTO public.moon VALUES ('Hyperion', 20, 'Natural', 7, false);
 
 
 --
 -- Data for Name: planet; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.planet VALUES ('Mercury', 1, false, 1, 'Rocky');
+INSERT INTO public.planet VALUES ('Venus', 2, false, 1, 'Rocky');
+INSERT INTO public.planet VALUES ('Earth', 3, true, 1, 'Terrestrial');
+INSERT INTO public.planet VALUES ('Mars', 4, false, 1, 'Rocky');
+INSERT INTO public.planet VALUES ('Jupiter', 5, false, 2, 'Gas Giant');
+INSERT INTO public.planet VALUES ('Saturn', 6, false, 2, 'Gas Giant');
+INSERT INTO public.planet VALUES ('Uranus', 7, false, 3, 'Ice Giant');
+INSERT INTO public.planet VALUES ('Neptune', 8, false, 3, 'Ice Giant');
+INSERT INTO public.planet VALUES ('Pluto', 9, false, 4, 'Dwarf');
+INSERT INTO public.planet VALUES ('Kepler-22b', 10, true, 5, 'Terrestrial');
+INSERT INTO public.planet VALUES ('Gliese 581g', 11, true, 6, 'Terrestrial');
+INSERT INTO public.planet VALUES ('HD 209458 b', 12, false, 2, 'Hot Jupiter');
 
 
 --
@@ -312,7 +350,7 @@ INSERT INTO public.star VALUES ('Vega', 6, 1, false, NULL);
 -- Name: comet_comet_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.comet_comet_id_seq', 1, false);
+SELECT pg_catalog.setval('public.comet_comet_id_seq', 6, true);
 
 
 --
@@ -326,14 +364,14 @@ SELECT pg_catalog.setval('public.galaxy_galaxy_id_seq', 6, true);
 -- Name: moon_mood_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.moon_mood_id_seq', 1, false);
+SELECT pg_catalog.setval('public.moon_mood_id_seq', 20, true);
 
 
 --
 -- Name: planet_planet_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.planet_planet_id_seq', 1, false);
+SELECT pg_catalog.setval('public.planet_planet_id_seq', 12, true);
 
 
 --
