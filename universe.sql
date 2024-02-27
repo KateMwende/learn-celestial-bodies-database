@@ -276,6 +276,12 @@ ALTER TABLE ONLY public.star ALTER COLUMN star_id SET DEFAULT nextval('public.st
 -- Data for Name: galaxy; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.galaxy VALUES ('Milky Way', 1, 'Spiral', 13000, 25000, 1500000000000, true, true);
+INSERT INTO public.galaxy VALUES ('Andromeda', 2, 'Spiral', 13000, 25000, 1200000000000, false, false);
+INSERT INTO public.galaxy VALUES ('Triangulum', 3, 'Spiral', 13000, 25000, 850000000000, false, false);
+INSERT INTO public.galaxy VALUES ('Comet Galaxy', 4, 'Spiral', 11000, 48000, 3600000000000, false, false);
+INSERT INTO public.galaxy VALUES ('Condor Galaxy', 5, 'Elliptical', 12000, 55000, 2500000000000, true, false);
+INSERT INTO public.galaxy VALUES ('Sombrero', 6, 'Spiral', 9000, 75000, 1100000000000, false, true);
 
 
 --
@@ -294,6 +300,12 @@ ALTER TABLE ONLY public.star ALTER COLUMN star_id SET DEFAULT nextval('public.st
 -- Data for Name: star; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.star VALUES ('Sun', 1, 1, true, 'Solar System');
+INSERT INTO public.star VALUES ('Sirius', 2, 2, true, 'Canis Major');
+INSERT INTO public.star VALUES ('Alpha Centauri', 3, 2, false, NULL);
+INSERT INTO public.star VALUES ('Betelgeuse', 4, 3, true, 'Orion');
+INSERT INTO public.star VALUES ('Proxima Centauri', 5, 3, false, NULL);
+INSERT INTO public.star VALUES ('Vega', 6, 1, false, NULL);
 
 
 --
@@ -307,7 +319,7 @@ SELECT pg_catalog.setval('public.comet_comet_id_seq', 1, false);
 -- Name: galaxy_galaxy_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.galaxy_galaxy_id_seq', 1, false);
+SELECT pg_catalog.setval('public.galaxy_galaxy_id_seq', 6, true);
 
 
 --
@@ -328,7 +340,7 @@ SELECT pg_catalog.setval('public.planet_planet_id_seq', 1, false);
 -- Name: star_star_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.star_star_id_seq', 1, false);
+SELECT pg_catalog.setval('public.star_star_id_seq', 6, true);
 
 
 --
